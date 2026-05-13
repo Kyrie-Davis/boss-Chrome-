@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { width: 300px; font-size: 13px; font-family: "Microsoft YaHei", sans-serif; padding: 14px; }
+    h2 { font-size: 15px; margin-bottom: 8px; color: #07c160; }
+    button { width: 100%; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
+    .btn-scrape { background: #07c160; color: #fff; }
+    .btn-scrape:hover { background: #06ad56; }
+    .btn-export { background: #1989fa; color: #fff; }
+    .btn-export:hover { background: #1676d6; }
+    .btn-clear { background: #eee; color: #666; }
+    .btn-clear:hover { background: #ddd; }
+    #status { margin-top: 8px; padding: 8px; background: #f5f5f5; border-radius: 4px; min-height: 28px; font-size: 12px; }
+    #count { color: #07c160; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Boss直聘爬虫</h2>
+
+  <button class="btn-scrape" id="btnScrape">抓取当前页</button>
+  <button class="btn-export" id="btnExport">导出 Excel</button>
+  <button class="btn-clear" id="btnClear">清空数据</button>
+
+  <div id="status">
+    已抓取 <span id="count">0</span> 条
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

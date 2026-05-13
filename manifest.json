@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Boss直聘爬虫",
+  "version": "1.0",
+  "description": "批量抓取Boss直聘招聘信息，导出为Excel",
+  "permissions": ["storage", "downloads"],
+  "host_permissions": ["https://*.zhipin.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.zhipin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Boss直聘爬虫",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
